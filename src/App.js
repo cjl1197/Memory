@@ -58,7 +58,7 @@ function fillArray()
   const [count, setCount] = useState(0)
   const [finished, setFinished] = useState(true)
   const [gameOne, setGameOne] = useState(true)
-  const [playerName, setPlayerName] = useState("Anonymous")
+  const [playerName, setPlayerName] = useState("")
   const [time2, setTime2] = useState('0:00')
   const [scores, setScores] = useState([])
   const [scores2, setScores2] = useState([])
@@ -153,6 +153,8 @@ function fillArray()
  }, [])
 
  const submit = () => {
+  if (playerName == "")
+    setPlayerName("Anonymous")
     const data = {
       name: playerName,
       time: time2
@@ -232,7 +234,8 @@ function fillArray()
           </div>
           <div>
             <input type={"text"} 
-                    required placeholder="Name" 
+                    required 
+                    placeholder="Name" 
                     value={playerName}
                     onChange={handleChange}> 
             </input>
