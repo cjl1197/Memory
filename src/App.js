@@ -107,6 +107,11 @@ function fillArray()
       setDisabled(true)
         if (choiceOne.props.card === choiceTwo.props.card){
           setCount(prevCount => prevCount + 1)
+          if (count === 8)
+          {
+            if (playerName === "")
+              setPlayerName("Anonymous")
+          }
             if(count === 9)
             {
               setFinished(true)
