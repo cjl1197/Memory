@@ -58,7 +58,7 @@ function fillArray()
   const [count, setCount] = useState(0)
   const [finished, setFinished] = useState(true)
   const [gameOne, setGameOne] = useState(true)
-  const [playerName, setPlayerName] = useState("")
+  const [playerName, setPlayerName] = useState("Anonymous")
   const [time2, setTime2] = useState('0:00')
   const [scores, setScores] = useState([])
   const [scores2, setScores2] = useState([])
@@ -159,7 +159,7 @@ function fillArray()
     };
 
     axios({
-      url: 'https://mynodeserver.duckdns.org:8080/api/save',
+      url: 'https://mynodeserver.duckdns.org:8080/api/save/',
       method: 'POST',
       data: data
     })
@@ -172,7 +172,7 @@ function fillArray()
 
  };
  const countScores = () =>{
-  axios.get('https://mynodeserver.duckdns.org:8080/api/size')
+  axios.get('https://mynodeserver.duckdns.org:8080/api/size/')
   .then((response) => {
     if (response.data >= 10)
       deleteMax()
