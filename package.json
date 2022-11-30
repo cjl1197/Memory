@@ -16,7 +16,6 @@
     "react-scripts": "^5.0.1",
     "react-timecode": "^1.2.0",
     "react-timer-wrapper": "^0.4.1",
-    "server": "^1.0.37",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
