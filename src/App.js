@@ -159,7 +159,7 @@ function fillArray()
     };
 
     axios({
-      url: 'api/save',
+      url: 'https://mynodeserver.duckdns.org:8080/api/save',
       method: 'POST',
       data: data
     })
@@ -172,7 +172,7 @@ function fillArray()
 
  };
  const countScores = () =>{
-  axios.get('api/size')
+  axios.get('https://mynodeserver.duckdns.org:8080/api/size')
   .then((response) => {
     if (response.data >= 10)
       deleteMax()
@@ -187,7 +187,7 @@ function fillArray()
  const deleteMax = () => {
   
     try{
-        axios.delete('api/delete/')
+        axios.delete('https://mynodeserver.duckdns.org:8080/api/delete/')
     }
     catch (error)
     {
