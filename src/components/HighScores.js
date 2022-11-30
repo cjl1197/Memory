@@ -9,7 +9,7 @@ function Scores() {
   },[])
 
   const getScores = () => {
-        axios.get('http://mynodeserver.duckdns.org:8080/api')
+        axios.get('https://mynodeserver.duckdns.org:8080/api')
         .then((response) => {
           const data = response.data
           setScores2(data)
